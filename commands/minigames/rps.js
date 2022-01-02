@@ -1,12 +1,19 @@
 const simplydjs = require("simply-djs");
 
+const { Message, Client } = require("discord.js");
 
-
-
-
-
-
-simplydjs.rps(message, {
+module.exports = {
+    name: "rps",
+    aliases: ['rockpapersissors'],
+     permissions: ["SEND_MESSAGES"],
+    /**
+     *
+     * @param {Client} client
+     * @param {Message} message
+     * @param {String[]} args
+     */
+    run: async (client, message, args) => {
+       simplydjs.rps(message, {
   embedColor: "#075FFF", // default: #075FFF
   timeoutEmbedColor: "#c90000", // default: #c90000
   drawEmbedColor: "#075FFF", // default: #075FFF
@@ -16,3 +23,12 @@ simplydjs.rps(message, {
   paperColor: "colors", // default: SECONDARY
   scissorsColor: "colors" // default: SECONDARY
 });
+    },
+};
+
+
+
+
+
+
+

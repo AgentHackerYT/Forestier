@@ -34,22 +34,6 @@ client.categories = fs.readdirSync("./commands/");
     require(`./handlers/${handler}`)(client)
 });
 
-const language = "en", childMode = false, gameType = "character", useButtons = true; 
-      client
-      .on(
-      "messageCreate", 
-async message => { if ( 
-      message
-      .content
-      .startsWith (
-      `${prefix}akinator` 
-      && `${prefix}aki`
-      ) ) { akinator (
-            message, {
-    language: language, 
-    childMode: childMode, 
-    gameType: gameType, 
-    useButtons: useButtons
-        });}});
+
 
 client.login(token);
